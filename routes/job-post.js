@@ -12,6 +12,6 @@ job_post_router.get("/", async (req, res, next) => {
       salary: (job.salary_min + job.salary_max) / 2,
     };
   });
-  res.json(jobs);
+  res.render("index", { jobs });
 });
 module.exports = job_post_router;
